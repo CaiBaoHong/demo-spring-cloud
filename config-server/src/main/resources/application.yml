@@ -8,5 +8,7 @@ spring:
     config:
       server:
         git:
-          uri: https://github.com/CaiBaoHong/demo-spring-cloud/tree/dev # 配置文件所存放的git地址
-          searchPaths: config # 寻找路径
+          uri: https://github.com/CaiBaoHong/demo-spring-cloud/blob/dev/ # 配置文件所在的git仓库
+          search-paths: config # 查找配置文件的路径
+          username: CaiBaoHong
+          password: cbh@gh2016
