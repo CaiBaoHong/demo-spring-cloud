@@ -1,9 +1,10 @@
 spring:
-    application:
-        name: a-bootiful-client
-    cloud:
+  application:
+    name: a-bootiful-client
+      cloud:
         config:
-            uri: http://localhost:8888
+          #配置服务器地址
+          uri: http://localhost:8888
 management:
-    security:
-        enabled: false
+  security:
+    enabled: false
