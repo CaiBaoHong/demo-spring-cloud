@@ -1,0 +1,12 @@
+server:
+  port: 8888
+
+spring:
+  application:
+    name: config-server
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/CaiBaoHong/demo-spring-cloud/tree/dev # 配置文件所存放的git地址
+          searchPaths: config # 寻找路径
