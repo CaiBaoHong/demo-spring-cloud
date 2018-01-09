@@ -1,9 +1,11 @@
 server:
-  port: 2222
+  port: 0
 spring:
   application:
     name: hello-service
 eureka:
+  instance:
+    instance-id: ${spring.application.name}:${random.int}
   client:
     service-url:
       #指定服务注册中心的地址（单节点）
