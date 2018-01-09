@@ -1,0 +1,12 @@
+# 高可用的服务注册中心配置
+server:
+  port: 1112
+spring:
+  application:
+    name: eureka-server
+eureka:
+  instance:
+    hostname: peer2
+  client:
+    service-url:
+      defaultZone: http://peer1:1111/eureka
