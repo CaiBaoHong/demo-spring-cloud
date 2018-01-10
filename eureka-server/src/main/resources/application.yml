@@ -1,7 +1,9 @@
 # 单节点的服务注册中心配置
-#server:
-#  port: 1111
-#eureka:
-#  client:
-#    register-with-eureka: false
-#    fetch-registry: false
+server:
+  port: 1111
+eureka:
+  client:
+    register-with-eureka: false
+    fetch-registry: false
+  server:
+    enable-self-preservation: false

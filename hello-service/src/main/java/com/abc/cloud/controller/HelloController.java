@@ -10,6 +10,8 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.Random;
+
 @RestController
 public class HelloController {
 
@@ -19,8 +21,14 @@ public class HelloController {
     private DiscoveryClient discoveryClient;
 
     @GetMapping("/hello")
-    public String hello(){
+    public String hello() throws InterruptedException {
         ServiceInstance instance = discoveryClient.getLocalServiceInstance();
+
+        //模拟处理超时
+        int sleepTime = new Random().nextInt(3000);
+        logger.info("HELLO-SERVICE mock timeout, sleep: {} ms",sleepTime);
+        Thread.sleep(sleepTime);
+
         logger.info("/hello, host:{}, serviceId:{}",instance.getHost(),instance.getServiceId());
         return "Hello World, this message is provided by Hello-Service";
     }

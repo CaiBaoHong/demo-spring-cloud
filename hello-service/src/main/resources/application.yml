@@ -9,6 +9,6 @@ eureka:
   client:
     service-url:
       #指定服务注册中心的地址（单节点）
-      #defaultZone: http://localhost:1111/eureka
+      defaultZone: http://localhost:1111/eureka
       #指定服务注册中心的地址（两个节点）
-      defaultZone: http://peer1:1111/eureka,http://peer1:1112
+      #defaultZone: http://peer1:1111/eureka,http://peer1:1112
