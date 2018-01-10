@@ -5,7 +5,7 @@ spring:
     name: hello-service
 eureka:
   instance:
-    instance-id: ${spring.application.name}:${random.int}
+    instance-id: ${spring.application.name}-${random.int[5000,9999]}
   client:
     service-url:
       #指定服务注册中心的地址（单节点）
